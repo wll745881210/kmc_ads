@@ -1,0 +1,45 @@
+[mesh]
+idx_gpu  = 0
+output   = 1
+osd      = 1
+n_cell   = 64 64
+n_thread =    32
+n_iter   = 100000000
+
+[adsorption]
+# 7 AU
+beta_inv = 2.3e-2
+zeta_in  = 4.5
+species  = H2O CO
+cfl      = 3e0
+n_nb_max = 4
+
+[cond_nucleus]
+species  = H2O
+location = 32 32
+radius   = 1
+
+# [H2]
+# abund  = 0.5
+# nu_hop = 5.0e12
+# nu_ads = 3.5e12
+# e_ads  = 0.03
+# e_hop  = 0.01
+# e_ngbr = 0 0 0
+# e_diag = 0 0 0
+
+[H2O]
+abund  = 1.4e-4
+nu_hop = 6.0e12
+nu_ads = 6.0e12
+e_ads  = 1.1
+e_hop  = 1.1
+e_ngbr = 0.18 0.01
+
+[CO]
+abund  = 1.8e-4
+nu_hop = 3.0e12
+nu_ads = 3.6e12
+e_ads  = 0.45
+e_hop  = 0.45
+e_ngbr = 0.04 0.01
